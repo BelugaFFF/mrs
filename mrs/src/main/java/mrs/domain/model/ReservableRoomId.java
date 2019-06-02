@@ -44,6 +44,11 @@ public class ReservableRoomId implements Serializable{
 		}else if(!reservedDate.equals(other.reservedDate)) {
 			return false;
 		}
+		if(roomId == null) {
+			if(other.roomId != null) return false;
+		} else if(!roomId.equals(other.roomId)) {
+			return false;
+		}
 
 		return true;
 	}
